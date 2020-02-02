@@ -306,6 +306,7 @@
       padding: 18px 45px;
       font-weight: 500;
       cursor: pointer;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.16);
     }
     &-heading {
       color: $blue;
@@ -314,6 +315,56 @@
       font-size: 30px;
       line-height: 1;
       margin-bottom: 120px;
+    }
+  }
+
+  &__contact {
+    .center-form {
+      display: flex;
+      justify-content: center;
+    }
+    &-container.override {
+      max-width: 600px;
+      background: url(/shapes.svg) no-repeat;
+      background-size: cover;
+      padding-top: 10px;
+      // background-position: 0px -100px;
+
+      min-height: 200px;
+      .input-wrapper {
+        input {
+          padding: 10px 40px;
+          border-radius: 40px;
+          min-width: 363px;
+          border: 4px solid #502eff;
+          color: $blue;
+          outline: none;
+          &::placeholder {
+            color: $blue;
+          }
+        }
+        button {
+          text-transform: lowercase;
+          padding: 8px 30px;
+          margin-left: 20px;
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.16);
+        }
+      }
+    }
+    &-heading {
+      color: $blue;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 50px;
+    }
+    &-sub-heading {
+      font-family: Graphie;
+      text-align: center;
+      font-weight: bold;
+      color: $gray;
+      text-transform: capitalize;
     }
   }
 

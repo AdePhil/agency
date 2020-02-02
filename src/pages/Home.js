@@ -215,7 +215,7 @@ const Home = () => {
               Standard screen generation and design for all.
             </p>
             <div className="socials">
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="11.945"
@@ -229,7 +229,7 @@ const Home = () => {
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="27.815"
@@ -243,7 +243,7 @@ const Home = () => {
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="27.816"
@@ -257,7 +257,7 @@ const Home = () => {
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="23.841"
@@ -281,7 +281,7 @@ const Home = () => {
               Standard screen generation and design for all.
             </p>
             <div className="socials">
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="11.945"
@@ -295,7 +295,7 @@ const Home = () => {
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="27.815"
@@ -309,7 +309,7 @@ const Home = () => {
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="27.816"
@@ -323,7 +323,7 @@ const Home = () => {
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="23.841"
@@ -345,6 +345,20 @@ const Home = () => {
           <button className="btn btn--blue btn--radius team-btn">
             Let's catch all
           </button>
+        </div>
+      </div>
+      <div className="agency__contact">
+        <div className="container agency__contact-container override">
+          <p className="agency__contact-sub-heading">contact us</p>
+          <h3 className="agency__contact-heading">
+            Have an awesome idea in your mind? <br /> we would love to hear
+          </h3>
+          <div className="center-form">
+            <div className="input-wrapper">
+              <input type="text" placeholder="enter your email" />
+              <button className="btn--blue btn--radius">start</button>
+            </div>
+          </div>
         </div>
       </div>
       <div className="agency__footer">
