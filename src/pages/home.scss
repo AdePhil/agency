@@ -1,0 +1,214 @@
+@import "../variables.scss";
+.agency {
+  &__header {
+    padding-top: 80px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    &-item {
+      margin-left: 40px;
+      text-decoration: none;
+      color: $blue;
+      font-weight: 500;
+    }
+    .project-btn {
+      margin-left: 60px;
+    }
+  }
+  &__home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+
+    .hero-img {
+      position: absolute;
+      right: 0;
+      width: 50%;
+      top: -50px;
+      object-fit: cover;
+      height: 100vh;
+      z-index: 8;
+    }
+    &-bg-text {
+      position: absolute;
+      transform: rotate(-90deg);
+      font-size: 143px;
+      color: $blue;
+      opacity: 0.1;
+      font-family: Graphie;
+      font-weight: bolder;
+      left: -210px;
+    }
+    &-text {
+      width: 100%;
+      &-heading {
+        font-family: Graphie;
+        font-size: 140px;
+        line-height: 0.8;
+        color: $blue;
+        margin-bottom: 44px;
+        font-weight: bolder;
+        left: 0;
+      }
+      &-sub-heading {
+        display: flex;
+        color: $deep-blue;
+        font-weight: bold;
+      }
+      .play-btn {
+        border-radius: 70px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+  &__services {
+    min-height: 80vh;
+    position: relative;
+    background-color: $blue;
+    margin-top: 40px;
+    background: $blue;
+
+    &::before {
+      min-height: 80vh;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      content: "";
+      z-index: 1;
+      background: url("/small_dots.svg");
+      opacity: 0.2;
+    }
+    &-container.override {
+      padding: 150px 50px 150px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      color: #fff;
+      grid-gap: 80px 30px;
+    }
+    &-heading {
+      color: #fff;
+      font-size: 80px;
+      line-height: 0.8;
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+  }
+  &__service {
+    display: flex;
+    align-items: flex-start;
+    img {
+      margin-right: 20px;
+      margin-top: 5px;
+    }
+    &-heading {
+      margin: 0;
+    }
+    p {
+      margin-top: 5px;
+      max-width: 250px;
+    }
+  }
+  &__team {
+    color: #bebebe;
+    padding: 100px 0;
+    &-sub-heading {
+      font-family: Graphie;
+      text-align: center;
+      font-weight: bold;
+    }
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 80px 30px;
+      position: relative;
+    }
+    &-member {
+      text-align: center;
+      position: relative;
+      z-index: 8;
+      &-img {
+        &-1 {
+          background-color: #ffc5b8;
+        }
+        &-2 {
+          background-color: #ff5630;
+        }
+        &-3 {
+          background-color: #3e4863;
+        }
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.16);
+        img {
+          width: 100%;
+          object-fit: none;
+          min-height: 500px;
+          object-fit: cover;
+        }
+      }
+      &-name {
+        color: $blue;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+      &-desc {
+        max-width: 250px;
+        margin: 0 auto;
+      }
+      .socials {
+        svg {
+          fill: $gray;
+          width: 18px;
+          margin-right: 25px;
+        }
+      }
+      // background-color: #FF5630;
+    }
+    &-bg-team-text {
+      position: absolute;
+      color: $blue;
+      font-size: 300px;
+      top: -250px;
+      font-family: Graphie;
+      left: -110px;
+      opacity: 0.1;
+      font-weight: bolder;
+    }
+    .team-big-dots {
+      position: absolute;
+      right: -480px;
+      top: -120px;
+      width: 600px;
+    }
+    .team-btn {
+      margin-top: 40px;
+      padding: 18px 45px;
+      font-weight: 500;
+    }
+    &-heading {
+      color: $blue;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 120px;
+    }
+  }
+}
