@@ -136,8 +136,7 @@ const Home = () => {
       <div className="agency__team">
         <p className="agency__team-sub-heading">Meet The Team</p>
         <h3 className="agency__team-heading">
-          great outcome always relay on
-          <br /> the great foundation
+          great outcome always relay on the great foundation
         </h3>
         <div className="agency__team-container container">
           <div className="agency__team-member">

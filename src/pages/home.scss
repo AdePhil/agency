@@ -19,7 +19,6 @@
       background-color: transparent;
       border: none;
       font-size: 25px;
-      width: 100px;
       outline: none;
       cursor: pointer;
       color: $deep-blue;
@@ -45,7 +44,7 @@
       overflow: hidden;
       opacity: 0;
       transition: opacity 300ms;
-      padding-top: 120px;
+      padding-top: 80px;
       &.show {
         opacity: 1;
         z-index: 100;
@@ -62,8 +61,8 @@
     .close {
       display: none;
       position: absolute;
-      top: 18px;
-      right: 20px;
+      top: 15px;
+      right: -10px;
       font-size: 40px;
       width: 100px;
       color: #fff;
@@ -144,6 +143,7 @@
         align-items: center;
         flex-direction: column;
       }
+
       &-heading {
         font-family: Graphie;
         font-size: 140px;
@@ -153,7 +153,7 @@
         font-weight: bolder;
         left: 0;
         @media (max-width: 600px) {
-          font-size: 100px;
+          font-size: 90px;
           margin-top: -20px;
         }
       }
@@ -210,7 +210,7 @@
       grid-column: 1 / -1;
       margin-bottom: 0;
       @media (max-width: 600px) {
-        font-size: 60px;
+        font-size: 45px;
         margin-top: -20px;
       }
     }
@@ -300,6 +300,9 @@
       right: -480px;
       top: -120px;
       width: 600px;
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
     .team-btn {
       margin-top: 40px;
@@ -309,12 +312,19 @@
       box-shadow: 0 20px 30px rgba(0, 0, 0, 0.16);
     }
     &-heading {
-      color: $blue;
+      color: #502eff;
       text-align: center;
       font-weight: bolder;
       font-size: 30px;
-      line-height: 1;
+      line-height: 1.1;
       margin-bottom: 120px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: Graphie;
+      @media (max-width: 600px) {
+        font-size: 25px;
+      }
     }
   }
 
@@ -322,6 +332,9 @@
     .center-form {
       display: flex;
       justify-content: center;
+      @media (max-width: 508px) {
+        flex-direction: column;
+      }
     }
     &-container.override {
       max-width: 600px;
@@ -339,6 +352,9 @@
           border: 4px solid #502eff;
           color: $blue;
           outline: none;
+          @media (max-width: 508px) {
+            min-width: 100%;
+          }
           &::placeholder {
             color: $blue;
           }
@@ -348,6 +364,16 @@
           padding: 8px 30px;
           margin-left: 20px;
           box-shadow: 0 20px 30px rgba(0, 0, 0, 0.16);
+          @media (max-width: 508px) {
+            padding: 18px 45px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-left: auto;
+            margin-right: auto;
+            display: inherit;
+            min-width: 150px;
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -356,8 +382,15 @@
       text-align: center;
       font-weight: bolder;
       font-size: 30px;
-      line-height: 1;
+      line-height: 1.1;
       margin-bottom: 50px;
+      max-width: 400px;
+      font-family: Graphie;
+      margin-left: auto;
+      margin-right: auto;
+      @media (max-width: 600px) {
+        font-size: 25px;
+      }
     }
     &-sub-heading {
       font-family: Graphie;
