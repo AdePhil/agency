@@ -121,7 +121,11 @@ const Home = () => {
             </div>
           </div>
           <div className="agency__service">
-            <img src="" alt="" className="agency__service-icon" />
+            <img
+              src="/app_testing.svg"
+              alt="App testing"
+              className="agency__service-icon"
+            />
             <div className="agency__service-text">
               <p className="agency__service-heading">App testing</p>
               <p>we test app for better user experience and results.</p>
