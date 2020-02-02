@@ -1,5 +1,28 @@
 @import "./variables.scss";
 
+@font-face {
+  font-family: "Graphie-Bold";
+  src: url("/css/webfont/Graphie-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/css/webfont/Graphie-Bold.otf") format("opentype"),
+    url("/css/webfont/Graphie-Bold.woff") format("woff"),
+    url("/css/webfont/Graphie-Bold.ttf") format("truetype"),
+    url("/css/webfont/Graphie-Bold.svg#Graphie-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphie-ExtraBold";
+  src: url("/css/webfont/Graphie-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/css/webfont/Graphie-ExtraBold.otf") format("opentype"),
+    url("/css/webfont/Graphie-ExtraBold.woff") format("woff"),
+    url("/css/webfont/Graphie-ExtraBold.ttf") format("truetype"),
+    url("/css/webfont/Graphie-ExtraBold.svg#Graphie-ExtraBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
