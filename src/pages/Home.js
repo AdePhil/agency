@@ -48,7 +48,7 @@ const Home = () => {
             </button>
           </div>
         </header>
-        <img src="/business_man.png" alt="Business man" className="hero-img" />
+        <img src="/business_man.webp" alt="Business man" className="hero-img" />
         <div className="container agency__home-text">
           <h1 className="agency__home-text-heading">
             creative <br /> agency
