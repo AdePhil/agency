@@ -1,7 +1,7 @@
 @import "../variables.scss";
 .agency {
   &__header {
-    padding-top: 60px;
+    padding-top: 40px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -104,9 +104,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
     z-index: 10;
-    // overflow: hidden;
+    overflow: hidden;
 
     .hero-img {
       position: absolute;
@@ -129,6 +129,7 @@
       font-family: Graphie;
       font-weight: bolder;
       left: -210px;
+      margin-top: 20px;
       @media (max-width: 1500px) {
         display: none;
       }
