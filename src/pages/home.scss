@@ -1,5 +1,6 @@
 @import "../variables.scss";
 .agency {
+  visibility: hidden;
   &__header {
     padding-top: 40px;
     position: absolute;
@@ -8,6 +9,7 @@
     z-index: 9;
     @media (max-width: 802px) {
       padding-top: 30px;
+      transform: none;
     }
     &-container {
       display: flex;
@@ -45,6 +47,7 @@
       opacity: 0;
       transition: opacity 300ms;
       padding-top: 80px;
+      min-height: 100vh;
       &.show {
         opacity: 1;
         z-index: 100;
@@ -76,6 +79,10 @@
       text-decoration: none;
       color: $blue;
       font-weight: 500;
+      color: #fff;
+      &:hover {
+        opacity: 0.5;
+      }
       @media (max-width: 802px) {
         width: 100%;
         display: block;
@@ -116,6 +123,7 @@
       object-fit: cover;
       height: 120vh;
       z-index: 8;
+      filter: brightness(60%);
       @media (max-width: 1086px) {
         display: none;
       }
@@ -157,11 +165,24 @@
           font-size: 90px;
           margin-top: -20px;
         }
+        &-line {
+          overflow: hidden;
+          margin-top: -30px;
+          height: 150px;
+
+          @media (max-width: 600px) {
+            height: 90px;
+            margin-top: -10px;
+          }
+        }
       }
       &-sub-heading {
         display: flex;
         color: $deep-blue;
         font-weight: bold;
+        @media (max-width: 600px) {
+          margin-top: -8px;
+        }
       }
       .play-btn {
         border-radius: 70px;

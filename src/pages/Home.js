@@ -1,15 +1,60 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { TweenMax, TimelineLite, Power3 } from "gsap";
 import "./home.scss";
 const Home = () => {
   const [show, setShow] = useState(false);
+  let homeText = useRef(null);
+  let home = useRef(null);
+  let services = useRef(null);
+  let heroImg = useRef(null);
+  let creativeText = useRef(null);
+
   const toggleClick = () => {
     setShow(previousShow => {
       return !previousShow;
     });
   };
+
+  useEffect(() => {
+    const tl = new TimelineLite();
+    TweenMax.to(home, 0, {
+      css: { visibility: "visible", height: "100vh", overflow: "hidden" }
+    });
+    const heading = homeText.children[0];
+    const headLineFirst = heading.firstElementChild;
+    const headLineSecond = headLineFirst.nextSibling;
+    const buttonWithText = heading.nextSibling;
+    const header = home.children[0].children[0];
+
+    tl.from(services, 1, { y: 200, ease: Power3.easeIn }, "start").from(
+      heroImg,
+      0.3,
+      {
+        opacity: 0,
+        ease: Power3.easeIn
+      },
+      1
+    );
+    //text-animation
+    tl.staggerFrom(
+      [headLineFirst.children, headLineSecond.children],
+      1,
+      { y: 150, ease: Power3.easeInOut, delay: 0.6 },
+      0.15,
+      "start"
+    ).from(buttonWithText, 1, { opacity: 0, ease: Power3.easeOut }, 1.3);
+
+    tl.from(header, 0.7, { y: -100, ease: Power3.easeOut }, 1.4);
+    tl.from(creativeText, 0.3, { x: -100, ease: Power3.easeIn }, 1.8);
+
+    tl.set(header, { clearProps: "y" });
+    TweenMax.to(home, 0, {
+      css: { height: "100%", overflow: "scroll" }
+    });
+  }, []);
   return (
-    <div className="agency">
+    <div className="agency" ref={el => (home = el)}>
       <div className="agency__home">
         <header className="agency__header">
           <div className="agency__header-container container">
@@ -48,10 +93,23 @@ const Home = () => {
             </button>
           </div>
         </header>
-        <img src="/business_man.webp" alt="Business man" className="hero-img" />
-        <div className="container agency__home-text">
+        <img
+          src="/test1.jpg"
+          alt="Business man"
+          className="hero-img"
+          ref={el => (heroImg = el)}
+        />
+        <div
+          className="container agency__home-text"
+          ref={el => (homeText = el)}
+        >
           <h1 className="agency__home-text-heading">
-            creative <br /> agency
+            <div className="agency__home-text-heading-line">
+              <div>creative</div>
+            </div>
+            <div className="agency__home-text-heading-line">
+              <div>agency</div>
+            </div>
           </h1>
           <div className="agency__home-text-sub-heading">
             <button className="play-btn btn btn--blue">
@@ -60,9 +118,11 @@ const Home = () => {
             <p>watch a video intro</p>
           </div>
         </div>
-        <div className="agency__home-bg-text">Creative</div>
+        <div className="agency__home-bg-text" ref={el => (creativeText = el)}>
+          Creative
+        </div>
       </div>
-      <div className="agency__services">
+      <div className="agency__services" ref={el => (services = el)}>
         <div className="container agency__services-container override">
           <h2 className="agency__services-heading">
             services <br /> & portfolio
@@ -134,10 +194,12 @@ const Home = () => {
         </div>
       </div>
       <div className="agency__team">
-        <p className="agency__team-sub-heading">Meet The Team</p>
-        <h3 className="agency__team-heading">
-          great outcome always relay on the great foundation
-        </h3>
+        <div className="container">
+          <p className="agency__team-sub-heading">Meet The Team</p>
+          <h3 className="agency__team-heading ">
+            great outcome always relay on the great foundation
+          </h3>
+        </div>
         <div className="agency__team-container container">
           <div className="agency__team-member">
             <div className="agency__team-member-img agency__team-member-img-1">
