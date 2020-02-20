@@ -83,6 +83,9 @@
       &:hover {
         opacity: 0.5;
       }
+      @media (max-width: 1191px) {
+        color: #000;
+      }
       @media (max-width: 802px) {
         width: 100%;
         display: block;
@@ -124,7 +127,7 @@
       height: 120vh;
       z-index: 8;
       filter: brightness(60%);
-      @media (max-width: 1086px) {
+      @media (max-width: 1191px) {
         display: none;
       }
     }
@@ -147,7 +150,7 @@
     }
     &-text {
       width: 100%;
-      @media (max-width: 1086px) {
+      @media (max-width: 1191px) {
         display: flex;
         align-items: center;
         flex-direction: column;
